@@ -86,14 +86,47 @@ describe('sayHello', function() {
 // - Step 4: Run all tests, expecting that all are now green. Does each test turn green? If so, then we can proceed. We can't refactor unless we have greened a test, even with a hard-coded implementation.
 // - Step 5: If you feel the urge to refactor already, hang on! Let's add one more test!
 // - Step 6: Repeat the TDD cycle, so let's add another test in the next exercise.
-//
+
+describe('sayHello', function() {
+    it('should be a defined function', function () {
+        expect(typeof sayHello).toBe('function');
+    });
+    it('should return a string when called', function () {
+        expect(typeof sayHello()).toBe("string");
+    });
+    it('should return the string "Hello, Jane!" when executed', function () {
+        expect(sayHello()).toBe("Hello, Jane!");
+    });
+    it('should return the string "Hello, Alex!" when executed', function () {
+        expect(sayHello("Alex")).toBe("Hello, Alex!");
+    });
+});
+
 // ### Exercise #5 One more test before refactoring...
 // - Step 1: Add another (tiny) assertion! In `tests.js`, assert that `sayHello("Pat")` returns `"Hello, Pat!"`. Since our tests should be super simple, the assertion should be `expect(sayHello("Pat")).toBe("Hello, Pat!")`
 // - Step 2: Run all tests and make sure that this newly added test is red and failing.
 // - Step 3: Again, you may feel the urge to jump to the "correct" answer already. Let's stay on target. Write *just* enough code to green the test. For this case, *just enough* code means adding another conditional such that if `input === "Pat"`, then the function should have `return "Hello, Pat!"`.
 // - Step 4: Run all tests. Does each test turn green? If so, then we can proceed.
 // - Step 5: Refactor! It's definitely refactoring time!
-//
+
+describe('sayHello', function() {
+    it('should be a defined function', function () {
+        expect(typeof sayHello).toBe('function');
+    });
+    it('should return a string when called', function () {
+        expect(typeof sayHello()).toBe("string");
+    });
+    it('should return the string "Hello, Jane!" when executed', function () {
+        expect(sayHello()).toBe("Hello, Jane!");
+    });
+    it('should return the string "Hello, Alex!" when executed', function () {
+        expect(sayHello("Alex")).toBe("Hello, Alex!");
+    });
+    it('should return the string "Hello, Pat!" when executed', function () {
+        expect(sayHello("Pat")).toBe("Hello, Pat!");
+    });
+});
+
 // ### When to Refactor
 // - How do we know that it's time to refactor? The answer: Once we have a handful of green tests, but the logic feels hard-coded, funky, or incomplete, then it's probably refactoring time.
 // - Notice that when the input is "Jane", "Pat", or "Alex", the tests green. But what if we sent in any other name as the argument?
