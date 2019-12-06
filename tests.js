@@ -142,22 +142,22 @@ describe('sayHello', function() {
 // - If we have `return "Hello, " + input + "!";`, does this work for all names?
 // - Does this bring up any other issues with other inputs?
 
-describe('sayHello', function() {
-    it('should return the string "Hello, " + name + "!" when executed', function () {
-        expect(sayHello(name)).toBe("Hello, " + name +"!");
-    });
-});
+// describe('sayHello', function() {
+//     it('should return the string "Hello, " + name + "!" when executed', function () {
+//         expect(sayHello(name)).toBe("Hello, " + name +"!");
+//     });
+// });
 
 //     ### Exercise #7 Add, commit, and push your work to GitHub.
 // - "If your code ain't checked-in to source control, then it doesn't exist."
 // - In your terminal, ensure that the `pwd` command shows that you're in the directory for this project.
 // - First, `git status`. Notice which files are tracked by git and which files have changes.
 // - Second, type `git add -A` to tell git that you want to get all the changed files staged for commit.
-//                                                                                               - Now, type `git status`. You should see file names in green. This means that the files are ready for commit.
-//                                                                                                                                                                                                     - Next, type `git commit -m "add tests and ability to say 'hello' to any input."`
+// - Now, type `git status`. You should see file names in green. This means that the files are ready for commit.
+// - Next, type `git commit -m "add tests and ability to say 'hello' to any input."`
 // - Type `git status`, again, to make sure that all files are added and committed.
 // - Finally, push your work with `git push`.
-//
+
 //     ### Exercise #8 "Repeat" step (where we look for additional tests to add)
 // - First, in `tests.js`, add `expect(sayHello()).toBe("Hello, World!")`. Then refresh `report.html` to see the failing test.
 // - Follow that by adding just enough code inside of the `sayHello` function `code.js` to green that latest test. Recommend checking if the input variable's value is `undefined`.
@@ -169,18 +169,30 @@ describe('sayHello', function() {
 // - Are there any other [edge cases](https://en.wikipedia.org/wiki/Edge_case) you want to write a test for? You have a green light to add more of your own tests to "drive" the implementation.
 // - Some edge cases to consider. What if:
 // - the input is `null`?
-//     - the input is an empty string like `""`?
-//     - the input is a number like `2.3`?
-//     - the input is a number inside a string like `"5"`?
-//     - the input is another data type like an array, object, or function?
-//
+// - the input is an empty string like `""`?
+// - the input is a number like `2.3`?
+// - the input is a number inside a string like `"5"`?
+// - the input is another data type like an array, object, or function?
+
+describe('sayHello', function() {
+    it('should return the string "Hello, World!" when executed', function () {
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" if true when executed', function () {
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" if false when executed', function () {
+        expect(sayHello(false)).toBe("Hello, World!")
+    })
+});
+
 //     ### Exercise #9 Add, commit, and push your work to GitHub (make this a habit)
 // - "If your code ain't checked-in to source control, then it doesn't exist."
 // - In your terminal, ensure that the `pwd` command shows that you're in the directory for this project.
 // - First, `git status`. Notice which files are tracked by git and which files have changes.
 // - Second, type `git add -A` to tell git that you want to get all the changed files staged for commit.
-//                                                                                               - Now, type `git status`. You should see file names in green. This means that the files are ready for commit.
-//                                                                                                                                                                                                     - Next, type `git commit -m "unit tests for edge cases."`
+// - Now, type `git status`. You should see file names in green. This means that the files are ready for commit.
+// - Next, type `git commit -m "unit tests for edge cases."`
 // - Type `git status`, again, to make sure that all files are added and committed.
 // - Finally, push your work with `git push`.
 //
