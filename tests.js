@@ -66,7 +66,19 @@ describe('sayHello', function() {
 // - Step 4: Run all tests. They should all be green at this point.
 // - Step 5: It's too soon to refactor.
 // - Step 6: Repeat step means to add another test, so let's move to the next exercise.
-//
+
+describe('sayHello', function() {
+    it('should be a defined function', function () {
+        expect(typeof sayHello).toBe('function');
+    });
+    it('should return a string when called', function () {
+        expect(typeof sayHello()).toBe("string");
+    });
+    it('should return the string "Hello, Jane!" when executed', function () {
+        expect(sayHello()).toBe("Hello, Jane!");
+    });
+});
+
 // ### Exercise #4 Add another small, simple test
 // - Step 1:  In `tests.js`, assert that `sayHello("Alex")` returns `"Hello, Alex!"`. Our first test should be *super* simple and *super* small. This means that our next test should look like `expect(sayHello("Alex")).toBe("Hello, Alex!")`.
 // - Step 2: Run all tests and make sure that this newly added test is red.
