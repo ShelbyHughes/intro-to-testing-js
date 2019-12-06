@@ -50,14 +50,14 @@ describe('sayHello', function() {
 // - Step 6: Repeat (Repeat the process by moving to build the next, small test)
 // - Always: Add, commit, and push your work to GitHub.
 
-describe('sayHello', function() {
-    it('should be a defined function', function () {
-        expect(typeof sayHello).toBe('function');
-    });
-    it('should return a string when called', function () {
-        expect(typeof sayHello()).toBe("string");
-    });
-});
+// describe('sayHello', function() {
+//     it('should be a defined function', function () {
+//         expect(typeof sayHello).toBe('function');
+//     });
+//     it('should return a string when called', function () {
+//         expect(typeof sayHello()).toBe("string");
+//     });
+// });
 
 //     ### Exercise #3 - Add a test to confirm actual vs. expected output.
 // - Step 1: How that the function exists and returns the right data type, let's add our first realistic assertion. In `tests.js`, assert that `sayHello("Jane")` returns `"Hello, Jane!"`. Our first test should be *super* simple and *super* small.
@@ -67,17 +67,17 @@ describe('sayHello', function() {
 // - Step 5: It's too soon to refactor.
 // - Step 6: Repeat step means to add another test, so let's move to the next exercise.
 
-describe('sayHello', function() {
-    it('should be a defined function', function () {
-        expect(typeof sayHello).toBe('function');
-    });
-    it('should return a string when called', function () {
-        expect(typeof sayHello()).toBe("string");
-    });
-    it('should return the string "Hello, Jane!" when executed', function () {
-        expect(sayHello()).toBe("Hello, Jane!");
-    });
-});
+// describe('sayHello', function() {
+//     it('should be a defined function', function () {
+//         expect(typeof sayHello).toBe('function');
+//     });
+//     it('should return a string when called', function () {
+//         expect(typeof sayHello()).toBe("string");
+//     });
+//     it('should return the string "Hello, Jane!" when executed', function () {
+//         expect(sayHello()).toBe("Hello, Jane!");
+//     });
+// });
 
 // ### Exercise #4 Add another small, simple test
 // - Step 1:  In `tests.js`, assert that `sayHello("Alex")` returns `"Hello, Alex!"`. Our first test should be *super* simple and *super* small. This means that our next test should look like `expect(sayHello("Alex")).toBe("Hello, Alex!")`.
@@ -87,20 +87,20 @@ describe('sayHello', function() {
 // - Step 5: If you feel the urge to refactor already, hang on! Let's add one more test!
 // - Step 6: Repeat the TDD cycle, so let's add another test in the next exercise.
 
-describe('sayHello', function() {
-    it('should be a defined function', function () {
-        expect(typeof sayHello).toBe('function');
-    });
-    it('should return a string when called', function () {
-        expect(typeof sayHello()).toBe("string");
-    });
-    it('should return the string "Hello, Jane!" when executed', function () {
-        expect(sayHello()).toBe("Hello, Jane!");
-    });
-    it('should return the string "Hello, Alex!" when executed', function () {
-        expect(sayHello("Alex")).toBe("Hello, Alex!");
-    });
-});
+// describe('sayHello', function() {
+//     it('should be a defined function', function () {
+//         expect(typeof sayHello).toBe('function');
+//     });
+//     it('should return a string when called', function () {
+//         expect(typeof sayHello()).toBe("string");
+//     });
+//     it('should return the string "Hello, Jane!" when executed', function () {
+//         expect(sayHello()).toBe("Hello, Jane!");
+//     });
+//     it('should return the string "Hello, Alex!" when executed', function () {
+//         expect(sayHello("Alex")).toBe("Hello, Alex!");
+//     });
+// });
 
 // ### Exercise #5 One more test before refactoring...
 // - Step 1: Add another (tiny) assertion! In `tests.js`, assert that `sayHello("Pat")` returns `"Hello, Pat!"`. Since our tests should be super simple, the assertion should be `expect(sayHello("Pat")).toBe("Hello, Pat!")`
@@ -109,39 +109,45 @@ describe('sayHello', function() {
 // - Step 4: Run all tests. Does each test turn green? If so, then we can proceed.
 // - Step 5: Refactor! It's definitely refactoring time!
 
-describe('sayHello', function() {
-    it('should be a defined function', function () {
-        expect(typeof sayHello).toBe('function');
-    });
-    it('should return a string when called', function () {
-        expect(typeof sayHello()).toBe("string");
-    });
-    it('should return the string "Hello, Jane!" when executed', function () {
-        expect(sayHello()).toBe("Hello, Jane!");
-    });
-    it('should return the string "Hello, Alex!" when executed', function () {
-        expect(sayHello("Alex")).toBe("Hello, Alex!");
-    });
-    it('should return the string "Hello, Pat!" when executed', function () {
-        expect(sayHello("Pat")).toBe("Hello, Pat!");
-    });
-});
+// describe('sayHello', function() {
+//     it('should be a defined function', function () {
+//         expect(typeof sayHello).toBe('function');
+//     });
+//     it('should return a string when called', function () {
+//         expect(typeof sayHello()).toBe("string");
+//     });
+//     it('should return the string "Hello, Jane!" when executed', function () {
+//         expect(sayHello()).toBe("Hello, Jane!");
+//     });
+//     it('should return the string "Hello, Alex!" when executed', function () {
+//         expect(sayHello("Alex")).toBe("Hello, Alex!");
+//     });
+//     it('should return the string "Hello, Pat!" when executed', function () {
+//         expect(sayHello("Pat")).toBe("Hello, Pat!");
+//     });
+// });
 
 // ### When to Refactor
 // - How do we know that it's time to refactor? The answer: Once we have a handful of green tests, but the logic feels hard-coded, funky, or incomplete, then it's probably refactoring time.
 // - Notice that when the input is "Jane", "Pat", or "Alex", the tests green. But what if we sent in any other name as the argument?
-//     - When every new test means that we're adding another `if` or `else if` to the code, is there a better way of doing things?
+// - When every new test means that we're adding another `if` or `else if` to the code, is there a better way of doing things?
 // - Refactoring is only possible once we have a handful of passing, green tests. These give us safety and guidance.
 // - This may feel slow, but each new test cycle should only take 2-3 minutes, if not shorter!
-//     - Since our goal is to have a sayHello function that says hello to any input string, then adding a new conditional for each input is not scalable.
+// - Since our goal is to have a sayHello function that says hello to any input string, then adding a new conditional for each input is not scalable.
 // - In the TDD approach, refactoring is only possible if you have enough tests and enough code that all the tests are green. In this way, your tests provide a target for the refactor. If your refactoring fails tests that
-//
+
 // ### Exercise #6 Implement the refactor!
-//     - Inside `sayHello` in `code.js`, what's a change you can identify that will improve the overall functioning of this function?
+// - Inside `sayHello` in `code.js`, what's a change you can identify that will improve the overall functioning of this function?
 // - Can you get the implmentation of `sayHello` down to a function with only one line of code inside?
-//     - If we have `return "Hello, " + input + "!";`, does this work for all names?
-//     - Does this bring up any other issues with other inputs?
-//
+// - If we have `return "Hello, " + input + "!";`, does this work for all names?
+// - Does this bring up any other issues with other inputs?
+
+describe('sayHello', function() {
+    it('should return the string "Hello, " + name + "!" when executed', function () {
+        expect(sayHello(name)).toBe("Hello, " + name +"!");
+    });
+});
+
 //     ### Exercise #7 Add, commit, and push your work to GitHub.
 // - "If your code ain't checked-in to source control, then it doesn't exist."
 // - In your terminal, ensure that the `pwd` command shows that you're in the directory for this project.
