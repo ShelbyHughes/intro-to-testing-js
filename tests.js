@@ -33,11 +33,13 @@ describe('sayHello', function() {
 //     - Open your terminal and navigate to the local directory where you cloned this project.
 // - First, `git status`. Notice which files are tracked by git and which files have changes.
 // - Second, type `git add -A` to tell git that you want to get all the changed files staged for commit.
-//                                                                                               - Now, type `git status`. You should see file names in green. This means that the files are ready for commit.
-//                                                                                                                                                                                                     - Next, type `git commit -m "add the first test and solution for intro-to-testing"`
+// - Now, type `git status`. You should see file names in green. This means that the files are ready for commit.
+// - Next, type `git commit -m "add the first test and solution for intro-to-testing"`
 // - Type `git status`, again, to make sure that all files are added and committed.
 // - Finally, push your work by running `git push`. Pushing uploads your new commits to your remote repository, meaning your own fork on GitHub.
-//
+
+
+
 //     ### Exercise #2 Ensure our function returns the right data type.
 // - New tests will each have their own `expect`, `it`,  the `describe`
 // - Step 1: The smallest possible test, now that the function exists, is to ensure that calling the function gives us a string. Inside of `tests.js`, add an assertion to `sayHello` that it "should return a string when called.". The test should look similar to `expect(typeof sayHello()).toBe("string")`
@@ -47,7 +49,16 @@ describe('sayHello', function() {
 // - Step 5: There's nothing to refactor.
 // - Step 6: Repeat (Repeat the process by moving to build the next, small test)
 // - Always: Add, commit, and push your work to GitHub.
-//
+
+describe('sayHello', function() {
+    it('should be a defined function', function () {
+        expect(typeof sayHello).toBe('function');
+    });
+    it('should return a string when called', function () {
+        expect(typeof sayHello()).toBe("string");
+    });
+});
+
 //     ### Exercise #3 - Add a test to confirm actual vs. expected output.
 // - Step 1: How that the function exists and returns the right data type, let's add our first realistic assertion. In `tests.js`, assert that `sayHello("Jane")` returns `"Hello, Jane!"`. Our first test should be *super* simple and *super* small.
 // - Step 2: Run all tests and make sure that this newly added test is red.
